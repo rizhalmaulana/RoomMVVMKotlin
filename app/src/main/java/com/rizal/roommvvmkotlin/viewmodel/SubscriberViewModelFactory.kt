@@ -1,4 +1,4 @@
-package com.rizal.roommvvmkotlin
+package com.rizal.roommvvmkotlin.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
