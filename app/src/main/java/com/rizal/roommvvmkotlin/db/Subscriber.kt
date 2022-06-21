@@ -1,4 +1,4 @@
-package com.rizal.roommvvmkotlin.localstorage
+package com.rizal.roommvvmkotlin.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

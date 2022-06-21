@@ -1,15 +1,17 @@
-package com.rizal.roommvvmkotlin.localstorage
+package com.rizal.roommvvmkotlin.db
 
 import android.content.Context
 import androidx.room.Database
-import androidx.room.Entity
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.rizal.roommvvmkotlin.helper.Converter
 
-@Database(entities = [Subscriber::class], version = 1)
+@Database(entities = [Subscriber::class], version = 1, exportSchema = false)
+@TypeConverters(Converter::class)
 abstract class SubscriberDatabase: RoomDatabase() {
 
-    abstract val subscriberDao: SubscriberDAO
+    abstract val subscriberDAO: SubscriberDAO
 
     companion object {
         @Volatile
@@ -23,7 +25,7 @@ abstract class SubscriberDatabase: RoomDatabase() {
                         context.applicationContext,
                         SubscriberDatabase::class.java,
                         "subscriber_data_database"
-                    ).build()
+                    ).allowMainThreadQueries().build()
                 }
                 return instance
             }

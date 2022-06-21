@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RoomMVVMKotlin</string>
+    <string name="email_subscriber">Email Subscriber</string>
 </resources>
